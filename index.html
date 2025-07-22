@@ -96,16 +96,42 @@
     </main>
     <!-- Mobile Menu (hidden on desktop) -->
     <div id="mobile-menu" style="display: none;">
-        <a href="#about">About Mangoes</a>
-        <a href="#why-us">Why Choose Us</a>
-        <a href="#contact">Contact</a>
-        <a href="src/farm.html">Check Our Farm</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#about">About Mangoes</a>
+                <a href="#why-us">Why Choose Us</a>
+                <a href="#contact">Contact</a>
+                <a href="src/farm.html">Check Our Farm</a>
+            </div>
+        </div>
     </div>
     <script>
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('show');
             document.body.classList.toggle('menu-open');
+        }
+        
+        function toggleDropdown() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if clicked outside
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
         }
     </script>
     <script src="src/js/main.js"></script>

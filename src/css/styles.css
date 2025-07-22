@@ -143,28 +143,16 @@ nav select {
 
 #mobile-menu {
     display: none;
-    flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #fff;
-    color: var(--text-dark);
-    z-index: 1000;
-    padding: 0;
+    background: #000;
+    z-index: 1001;
+    padding: 10px 0;
     margin: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    max-height: 70vh;
-    overflow-y: auto;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     border-radius: 0 0 8px 8px;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-#mobile-menu::-webkit-scrollbar {
-    display: none;
 }
 
 #mobile-menu.show {
@@ -172,20 +160,18 @@ nav select {
 }
 
 #mobile-menu a {
-    color: var(--text-dark);
-    text-decoration: none;
-    padding: 15px 20px;
-    text-align: left;
-    font-size: 1rem;
-    border-bottom: 1px solid #f0f0f0;
     display: block;
+    padding: 12px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-bottom: 1px solid #333;
     transition: all 0.2s ease;
-    font-weight: 500;
 }
 
 #mobile-menu a:hover {
-    background-color: var(--mango-yellow);
-    color: var(--text-dark);
+    background-color: #333;
+    color: var(--mango-yellow);
     padding-left: 25px;
 }
 

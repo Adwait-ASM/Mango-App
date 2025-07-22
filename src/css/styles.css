@@ -147,12 +147,13 @@ nav select {
     top: 100%;
     left: 0;
     width: 100%;
-    background: #000;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     z-index: 1001;
-    padding: 10px 0;
+    padding: 15px 0;
     margin: 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    border-radius: 0 0 8px 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    border-radius: 0 0 15px 15px;
+    border-top: 3px solid var(--mango-yellow);
 }
 
 #mobile-menu.show {
@@ -161,18 +162,22 @@ nav select {
 
 #mobile-menu a {
     display: block;
-    padding: 12px 20px;
-    color: #fff;
+    padding: 14px 25px;
+    color: #f0f0f0;
     text-decoration: none;
-    font-size: 16px;
-    border-bottom: 1px solid #333;
-    transition: all 0.2s ease;
+    font-size: 17px;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 #mobile-menu a:hover {
-    background-color: #333;
+    background: linear-gradient(90deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
     color: var(--mango-yellow);
-    padding-left: 25px;
+    padding-left: 30px;
+    transform: translateX(5px);
 }
 
 #mobile-menu a::before {

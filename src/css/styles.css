@@ -306,6 +306,27 @@ footer {
 }
 
 /* Responsive */
+/* Hide mobile menu by default on all screens */
+#mobile-menu {
+    display: none;
+}
+
+/* Desktop styles - hide hamburger and show regular nav */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+    
+    #mobile-menu {
+        display: none !important;
+    }
+    
+    nav ul {
+        display: flex !important;
+    }
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -318,13 +339,11 @@ footer {
     }
 
     nav ul {
-        display: none;
+        display: none !important;
     }
     
-    /* Ensure mobile menu is above other content */
-    header {
-        position: relative;
-        z-index: 1000;
+    #mobile-menu.show {
+        display: block !important;
     }
 
     header {

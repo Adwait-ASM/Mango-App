@@ -1,0 +1,12 @@
+{
+    "name": "kher-farm-website",
+    "version": "1.0.0",
+    "description": "Kher Farm Mango Website",
+    "main": "src/index.html",
+    "scripts": {
+        "start": "open src/index.html"
+    },
+    "keywords": ["mango", "farm", "ratnagiri", "alphonso"],
+    "author": "Kher Farm",
+    "license": "ISC"
+}

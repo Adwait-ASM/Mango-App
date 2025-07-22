@@ -150,25 +150,27 @@ nav select {
     top: 100%;
     left: 0;
     width: 100%;
-    background: #2a2a2a;
+    background: #222;
     z-index: 1001;
     padding: 0;
     margin: 0;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
 }
 
 #mobile-menu.show {
-    display: block;
+    display: block !important;
 }
 
 #mobile-menu a {
     display: block;
-    padding: 16px 25px;
+    padding: 18px 25px;
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     border-bottom: 1px solid #333;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-weight: 500;
 }
 
 #mobile-menu a:last-child {
@@ -178,7 +180,7 @@ nav select {
 #mobile-menu a:hover {
     background: #333;
     color: var(--mango-yellow);
-    padding-left: 30px;
+    transform: translateX(5px);
 }
 
 /* Hero Section */
@@ -311,13 +313,19 @@ footer {
         right: 20px;
         top: 20px;
         cursor: pointer;
+        z-index: 1002;
+        padding: 10px;
     }
 
     nav ul {
         display: none;
     }
     
-    /* Mobile menu is now defined above */
+    /* Ensure mobile menu is above other content */
+    header {
+        position: relative;
+        z-index: 1000;
+    }
 
     header {
         flex-direction: column;

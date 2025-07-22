@@ -143,11 +143,11 @@ nav select {
     transition: all 0.3s ease;
 }
 
-/* Mobile menu styles */
+/* Mobile menu - hidden by default */
 #mobile-menu {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 80px; /* Adjust based on your header height */
     left: 0;
     width: 100%;
     background: #222;
@@ -306,15 +306,10 @@ footer {
 }
 
 /* Responsive */
-/* Hide mobile menu by default on all screens */
-#mobile-menu {
-    display: none;
-}
-
-/* Desktop styles - hide hamburger and show regular nav */
+/* Desktop styles */
 @media (min-width: 769px) {
     .hamburger {
-        display: none;
+        display: none !important;
     }
     
     #mobile-menu {

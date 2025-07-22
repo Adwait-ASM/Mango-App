@@ -29,17 +29,6 @@
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="src/farm.html">Check Our Farm</a></li>
             </ul>
-            <div class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div id="mobile-menu">
-                <a href="#about">About Mangoes</a>
-                <a href="#why-us">Why Choose Us</a>
-                <a href="#contact">Contact</a>
-                <a href="src/farm.html">Check Our Farm</a>
-            </div>
         </nav>
     </header>
 
@@ -100,6 +89,13 @@
             </div>
         </section>
     </main>
+    <!-- Mobile Menu (hidden on desktop) -->
+    <div id="mobile-menu" style="display: none;">
+        <a href="#about">About Mangoes</a>
+        <a href="#why-us">Why Choose Us</a>
+        <a href="#contact">Contact</a>
+        <a href="src/farm.html">Check Our Farm</a>
+    </div>
     <script>
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');

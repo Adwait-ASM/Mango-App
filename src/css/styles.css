@@ -63,7 +63,7 @@ h3 {
 /* Header */
 header {
     height: auto;
-    min-height: 150px;
+    min-height: 120px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -144,17 +144,17 @@ nav select {
 #mobile-menu {
     display: none;
     flex-direction: column;
-    position: fixed;
-    top: 150px;
+    position: absolute;
+    top: 100%;
     left: 0;
     width: 100%;
-    height: calc(100vh - 150px);
     background-color: var(--text-dark);
     color: var(--background-light);
     z-index: 1000;
-    padding: 20px 0;
+    padding: 10px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    max-height: 70vh;
     overflow-y: auto;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -172,10 +172,11 @@ nav select {
 #mobile-menu a {
     color: var(--background-light);
     text-decoration: none;
-    padding: 12px;
+    padding: 12px 20px;
     text-align: center;
     font-size: 0.9rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
 }
 
 #mobile-menu a:hover {

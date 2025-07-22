@@ -16,4 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    window.addEventListener('scroll', () => {
+        const elements = document.querySelectorAll('.fade-in');
+        elements.forEach(element => {
+            const position = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (position < windowHeight) {
+                element.style.opacity = 1;
+                element.style.transform = 'translateY(0)';
+            }
+        });
+    });
 });

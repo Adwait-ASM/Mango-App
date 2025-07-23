@@ -1,0 +1,134 @@
+/* Farm Page Specific Styles */
+.hero-section {
+    padding: 120px 20px 60px;
+    text-align: center;
+    color: white;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 80px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.section-padding {
+    padding: 80px 20px;
+}
+
+.light-bg {
+    background-color: #f9f9f9;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Practices Grid */
+.practices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.practice-item {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.practice-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.practice-item h3 {
+    color: #e65100;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.practice-item p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .gallery-grid,
+    .practices-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .practice-item {
+        text-align: center;
+    }
+}
+
+/* Fix for mobile menu */
+@media (max-width: 992px) {
+    .nav-links {
+        top: 80px;
+        height: calc(100vh - 80px);
+        padding-top: 20px;
+    }
+    
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .nav-links a {
+        padding: 12px 20px;
+        display: block;
+        width: 100%;
+    }
+    
+    .farm-link {
+        margin-top: 10px;
+        text-align: center;
+        display: inline-block !important;
+    }
+}

@@ -16,24 +16,29 @@
     </style>
 </head>
 <body>
-    <header>
+    <header class="navbar">
         <div class="logo">
-            <img src="src/images/blob.jpg" alt="Kher Farm Logo">
-            <h1>Kher Farm</h1>
-            <p class="tagline">From Our Farm to Your Home</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#about">About Mangoes</a></li>
-                <li><a href="#why-us">Why Choose Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="src/farm.html">Check Our Farm</a></li>
-            </ul>
-            <div class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+            <img src="src/images/blob.jpg" alt="Kher Farm Logo" class="logo-img">
+            <div class="logo-text">
+                <h1>Kher Farm</h1>
+                <p class="tagline">From Our Farm to Your Home</p>
             </div>
+        </div>
+        
+        <div class="hamburger" aria-label="Toggle menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#about">About Mangoes</a></li>
+                <li><a href="#products">Our Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="src/farm.html" class="farm-link">Check Our Farm</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -111,29 +116,56 @@
         </div>
     </div>
     <script>
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('show');
-            document.body.classList.toggle('menu-open');
-        }
-        
-        function toggleDropdown() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-        
-        // Close the dropdown if clicked outside
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-                const dropdowns = document.getElementsByClassName("dropdown-content");
-                for (let i = 0; i < dropdowns.length; i++) {
-                    const openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            const navLinksItems = document.querySelectorAll('.nav-links a');
+            
+            // Function to close menu
+            function closeMenu() {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+                document.body.classList.remove('menu-open');
             }
-        }
+            
+            // Toggle menu on hamburger click
+            hamburger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const isActive = this.classList.contains('active');
+                
+                // Toggle current menu
+                this.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                
+                // Toggle body scroll
+                if (this.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (navLinks.classList.contains('active') && 
+                    !navLinks.contains(e.target) && 
+                    !hamburger.contains(e.target)) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+            
+            // Close menu when clicking on a nav link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        });
     </script>
-    <script src="src/js/main.js"></script>
 </body>
 </html>

@@ -2,9 +2,11 @@
     --mango-yellow: #FFD700;
     --mango-orange: #FFA500;
     --mango-green: #2ecc71;
+    --mango-dark: #E67E22;
     --text-dark: #333;
     --background-light: #f9f9f9;
     --background-dark: #222;
+    --nav-height: 80px;
 }
 
 * {
@@ -17,14 +19,249 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background: linear-gradient(135deg, #fff9c4, #fff176);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    border-radius: 50%;
+    border: 2px solid var(--mango-orange);
+}
+
+.logo-text h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e65100;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.logo-text .tagline {
+    font-size: 0.8rem;
+    color: #5d4037;
+    margin: 0;
+    font-style: italic;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--mango-orange);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--mango-orange);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    outline: none;
+    position: relative;
+}
+
+.hamburger .bar {
+    display: block;
+    height: 3px;
+    width: 30px;
+    background-color: #e65100;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    position: absolute;
+    left: 0;
+    transform: rotate(0);
+    opacity: 1;
+}
+
+.hamburger .bar:nth-child(1) { top: 5px; }
+.hamburger .bar:nth-child(2) { top: 13px; }
+.hamburger .bar:nth-child(3) { top: 21px; }
+
+/* Mobile Menu */
+@media (max-width: 992px) {
+    .hamburger {
+        display: flex;
+        position: relative;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background: #fff9e6;
+        padding: 80px 20px 20px;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 12px 15px;
+        border-radius: 5px;
+    }
+    
+    .nav-links a:hover {
+        background: rgba(230, 81, 0, 0.1);
+    }
+    
+    /* Animate hamburger to X when active */
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+        top: 13px;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+        top: 13px;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: #fff9e6;
+        padding: 80px 20px 20px;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .nav-links li {
+        width: 100%;
+        padding: 0;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.8rem 1rem;
+        width: 100%;
+        color: #5d4037;
+        font-weight: 500;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        background-color: rgba(230, 81, 0, 0.1);
+        color: #e65100;
+    }
+    
+    .logo-text h1 {
+        font-size: 1.3rem;
+    }
+    
+    .logo-text .tagline {
+        font-size: 0.7rem;
+    }
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: #222;
-    background-image: url('../images/mango-background.jpg'); /* Optional background */
+    background-image: url('../images/mango-background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    padding-top: var(--nav-height);
+}
+
+/* Add smooth scrolling for better UX */
+html {
+    scroll-behavior: smooth;
 }
 
 body.light-theme {
@@ -317,6 +554,36 @@ section {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact button.farm-link {
+    display: inline-block;
+    background: #fff;
+    color: #e65100 !important;
+    padding: 10px 25px !important;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 2px solid #e65100;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.farm-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(230, 81, 0, 0.3);
+    background: #e65100;
+    color: white !important;
+}
+
+.farm-link:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 #contact button:hover {

@@ -1,4 +1,4 @@
-hy# Kher Farm Website
+# Kher Farm Website
 
 ## Overview
 A responsive website for Kher Farm, showcasing Alphonso mangoes from Ratnagiri, Maharashtra.

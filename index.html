@@ -1,172 +1,135 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kher Farm - From Our Farm to Your Home</title>
-    <link rel="stylesheet" href="./src/css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
-    <style>
+<!-- Same DOCTYPE and <html> tag -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Kher Farm - From Our Farm to Your Home</title>
+      <link rel="stylesheet" href="./src/css/styles.css" />
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+      <style>
         body {
-            background-image: url('./src/images/mango2.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
+          background-image: url('./src/images/mango2.jpg');
+          background-size: cover;
+          background-attachment: fixed;
+          background-position: center;
+          font-family: 'Poppins', sans-serif;
         }
-    </style>
-</head>
-<body>
-    <header class="navbar">
+        .cta-button {
+          margin-top: 20px;
+          display: inline-block;
+          padding: 12px 24px;
+          background-color: #28a745;
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+          border-radius: 8px;
+          transition: background 0.3s ease;
+        }
+        .cta-button:hover {
+          background-color: #218838;
+        }
+        .hero-content {
+          background: rgba(255,255,255,0.7);
+          padding: 40px;
+          text-align: center;
+          border-radius: 12px;
+          max-width: 600px;
+          margin: auto;
+          margin-top: 80px;
+        }
+      </style>
+    </head>
+    <body>
+      <header class="navbar">
         <div class="logo">
-            <img src="src/images/blob.jpg" alt="Kher Farm Logo" class="logo-img">
-            <div class="logo-text">
-                <h1>Kher Farm</h1>
-                <p class="tagline">From Our Farm to Your Home</p>
-            </div>
+          <img src="src/images/kher-logo.png" alt="Kher Farm Logo" class="logo-img" style="height: 60px;" />
+          <div class="logo-text">
+            <h1>Kher Farm</h1>
+            <p class="tagline">From Our Farm to Your Home</p>
+          </div>
         </div>
-        
-        <div class="hamburger" aria-label="Toggle menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        
-        <nav class="nav-links">
+    
+        <div class="mobile-menu-container">
+          <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+          </button>
+    
+          <nav class="nav-links">
             <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#about">About Mangoes</a></li>
-                <li><a href="#products">Our Products</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="src/farm.html" class="farm-link">Check Our Farm</a></li>
+              <li><a href="#" class="active">Home</a></li>
+              <li><a href="#about">About Mangoes</a></li>
+              <li><a href="#products">Our Products</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li class="farm-item"><a href="src/farm.html" class="farm-link">Check Our Farm</a></li>
             </ul>
-        </nav>
-    </header>
-
-    <main>
+          </nav>
+        </div>
+      </header>
+    
+      <main>
         <section id="hero">
-            <div class="hero-content">
-                <h2 class="hero">Authentic Alphonso Mangoes from Ratnagiri</h2>
-            </div>
+          <div class="hero-content">
+            <h2 class="hero">Authentic Alphonso Mangoes from Ratnagiri</h2>
+            <a class="cta-button" href="https://wa.me/917720836994?text=Hi%20Kher%20Farm,%20I%20want%20to%20order%20mangoes.">
+              📦 Order Now on WhatsApp
+            </a>
+          </div>
         </section>
-
+    
         <section id="highlight">
-            <div class="highlight-image">
-                <img src="src/images/mangoes-hero.jpg" alt="Alphonso Mango">
-            </div>
+          <div class="highlight-image">
+            <img src="src/images/mangoes-hero.jpg" alt="Alphonso Mango">
+          </div>
         </section>
-
+    
         <section id="about">
-            <h2>Our Mangoes</h2>
-            <div class="mango-gallery">
-                <div class="mango-item">
-                    <img src="src/images/mango1.jpg" alt="Alphonso Mango">
-                    <h3>Alphonso Specialty</h3>
-                    <p class="description">Grown in the rich, fertile soils of Ratnagiri, our Alphonso mangoes are known for their exceptional sweetness and aroma.</p>
-                </div>
-                <div class="mango-item">
-                    <img src="src/images/mango2.jpg" alt="Mango Orchard">
-                    <h3>Sustainable Farming</h3>
-                    <p class="description">We use traditional, eco-friendly farming methods to ensure the highest quality and taste in every mango.</p>
-                </div>
-                <div class="mango-item">
-                    <h3>Traditional Ripening (No Carbide)</h3>
-                    <p>Our mangoes are ripened naturally using hay without harmful chemicals.</p>
-                </div>
+          <h2>Our Mangoes</h2>
+          <div class="mango-gallery">
+            <div class="mango-item">
+              <img src="src/images/mango1.jpg" alt="Alphonso Mango">
+              <h3>Alphonso Specialty</h3>
+              <p class="description">Grown in the rich, fertile soils of Ratnagiri, our Alphonso mangoes are known for their exceptional sweetness and aroma.</p>
             </div>
+            <div class="mango-item">
+              <img src="src/images/mango2.jpg" alt="Mango Orchard">
+              <h3>Sustainable Farming</h3>
+              <p class="description">We use traditional, eco-friendly farming methods to ensure the highest quality and taste in every mango.</p>
+            </div>
+            <div class="mango-item">
+              <h3>Traditional Ripening (No Carbide)</h3>
+              <p>Our mangoes are ripened naturally using hay without harmful chemicals.</p>
+            </div>
+          </div>
         </section>
-
+    
         <section id="why-us">
-            <h2>Why Choose Kher Farm</h2>
-            <ul>
-                <li> Naturally Ripened Mangoes</li>
-                <li> Direct from Our Farm to Your Home</li>
-                <li> Premium Quality Guaranteed</li>
-            </ul>
+          <h2>Why Choose Kher Farm</h2>
+          <ul>
+            <li> Naturally Ripened Mangoes</li>
+            <li> Direct from Our Farm to Your Home</li>
+            <li> Premium Quality Guaranteed</li>
+          </ul>
         </section>
-
+    
         <section id="contact">
-            <h2>Contact Us</h2>
-            <div class="contact-info">
-                <p>Location: Ratnagiri, Maharashtra, India</p>
-                <p>Phone: +91 7720836994</p>
-                <p>Email: adwaitkher7@gmail.com</p>
-                <form>
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="tel" placeholder="Your Phone" required>
-                    <textarea placeholder="Your Message"></textarea>
-                    <button type="submit">Send Inquiry</button>
-                </form>
-            </div>
+          <h2>Contact Us</h2>
+          <div class="contact-info">
+            <p>Location: Ratnagiri, Maharashtra, India</p>
+            <p>Phone: +91 7720836994</p>
+            <p>Email: adwaitkher7@gmail.com</p>
+            <form>
+              <input type="text" placeholder="Your Name" required>
+              <input type="tel" placeholder="Your Phone" required>
+              <textarea placeholder="Your Message"></textarea>
+              <button type="submit">Send Inquiry</button>
+            </form>
+          </div>
         </section>
-    </main>
-    <!-- Mobile Menu (hidden on desktop) -->
-    <div id="mobile-menu" style="display: none;">
-        <div class="dropdown">
-            <button class="dropbtn" onclick="toggleDropdown()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="#about">About Mangoes</a>
-                <a href="#why-us">Why Choose Us</a>
-                <a href="#contact">Contact</a>
-                <a href="src/farm.html">Check Our Farm</a>
-            </div>
-        </div>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
-            const navLinksItems = document.querySelectorAll('.nav-links a');
-            
-            // Function to close menu
-            function closeMenu() {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-                document.body.style.overflow = '';
-                document.body.classList.remove('menu-open');
-            }
-            
-            // Toggle menu on hamburger click
-            hamburger.addEventListener('click', function(e) {
-                e.stopPropagation();
-                const isActive = this.classList.contains('active');
-                
-                // Toggle current menu
-                this.classList.toggle('active');
-                navLinks.classList.toggle('active');
-                
-                // Toggle body scroll
-                if (this.classList.contains('active')) {
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    document.body.style.overflow = '';
-                }
-            });
-            
-            // Close menu when clicking outside
-            document.addEventListener('click', function(e) {
-                if (navLinks.classList.contains('active') && 
-                    !navLinks.contains(e.target) && 
-                    !hamburger.contains(e.target)) {
-                    hamburger.classList.remove('active');
-                    navLinks.classList.remove('active');
-                    document.body.style.overflow = '';
-                }
-            });
-            
-            // Close menu when clicking on a nav link
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', function() {
-                    hamburger.classList.remove('active');
-                    navLinks.classList.remove('active');
-                    document.body.style.overflow = '';
-                });
-            });
-        });
-    </script>
-    <script src="./src/js/main.js"></script>
-</body>
-</html>
+      </main>
+    
+      <!-- Existing JavaScript -->
+      <script src="./src/js/main.js"></script>
+    </body>
+    </html>
+    

@@ -1,136 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check Our Farm - Kher Farm</title>
-    <link rel="stylesheet" href="../src/css/styles.css">
-    <link rel="stylesheet" href="../src/css/farm-styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-image: url('../src/images/mango2.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Check Our Farm - Kher Farm</title>
+  <link rel="stylesheet" href="../src/css/styles.css" />
+  <link rel="stylesheet" href="../src/css/farm-styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">
-            <img src="../src/images/kher-logo.png" alt="Kher Farm Logo" class="logo-img">
-            <div class="logo-text">
-                <h1>Kher Farm</h1>
-                <p class="tagline">From Our Farm to Your Home</p>
-            </div>
+  <header class="navbar">
+    <div class="logo">
+      <img src="../src/images/kher-logo.png" alt="Kher Farm Logo" class="logo-img" />
+      <div class="logo-text">
+        <h1>Kher Farm</h1>
+        <p class="tagline">From Our Farm to Your Home</p>
+      </div>
+    </div>
+
+    <div class="hamburger" aria-label="Toggle menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#about">About Mangoes</a>
+      <a href="../index.html#products">Our Products</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="farm.html" class="active">Check Our Farm</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="farm-hero" class="hero-section">
+      <div class="hero-content">
+        <h2>Welcome to Our Farm</h2>
+        <p>Explore the beauty and sustainability of our farm. Learn about our eco-friendly practices and the journey of our mangoes from farm to table.</p>
+      </div>
+    </section>
+
+    <section id="farm-gallery" class="section-padding">
+      <h2>Our Farm in Pictures</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="../src/images/farm1.jpg" alt="Farm View 1" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=Farm+1'" />
         </div>
-        
-        <div class="hamburger" aria-label="Toggle menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+        <div class="gallery-item">
+          <img src="../src/images/farm2.jpg" alt="Farm View 2" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=Farm+2'" />
         </div>
-        
-        <nav class="nav-links">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../index.html#about">About Mangoes</a></li>
-                <li><a href="../index.html#products">Our Products</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
-                <li><a href="farm.html" class="farm-link active">Check Our Farm</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div class="gallery-item">
+          <img src="../src/images/farm3.jpg" alt="Farm View 3" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=Farm+3'" />
+        </div>
+      </div>
+    </section>
 
-    <main>
-        <section id="farm-hero" class="hero-section">
-            <div class="hero-content">
-                <h2>Welcome to Our Farm</h2>
-                <p>Explore the beauty and sustainability of our farm. Learn about our eco-friendly practices and the journey of our mangoes from farm to table.</p>
-            </div>
-        </section>
+    <section id="our-practices" class="section-padding light-bg">
+      <h2>Our Farming Practices</h2>
+      <div class="practices-grid">
+        <div class="practice-item">
+          <h3>Organic Farming</h3>
+          <p>We use only natural fertilizers and pest control methods to ensure the highest quality mangoes.</p>
+        </div>
+        <div class="practice-item">
+          <h3>Sustainable Water Use</h3>
+          <p>Our irrigation systems are designed to conserve water while keeping our trees healthy.</p>
+        </div>
+        <div class="practice-item">
+          <h3>Eco-Friendly Packaging</h3>
+          <p>We use biodegradable and recyclable materials for all our packaging needs.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        <section id="farm-gallery" class="section-padding">
-            <h2>Our Farm in Pictures</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="../src/images/farm1.jpg" alt="Farm View 1" onerror="this.src='https://via.placeholder.com/300x200?text=Farm+View+1'">
-                </div>
-                <div class="gallery-item">
-                    <img src="../src/images/farm2.jpg" alt="Farm View 2" onerror="this.src='https://via.placeholder.com/300x200?text=Farm+View+2'">
-                </div>
-                <div class="gallery-item">
-                    <img src="../src/images/farm3.jpg" alt="Farm View 3" onerror="this.src='https://via.placeholder.com/300x200?text=Farm+View+3'">
-                </div>
-            </div>
-        </section>
+  <footer>
+    <p>&copy; 2023 Kher Farm. All rights reserved.</p>
+  </footer>
 
-        <section id="our-practices" class="section-padding light-bg">
-            <h2>Our Farming Practices</h2>
-            <div class="practices-grid">
-                <div class="practice-item">
-                    <h3>Organic Farming</h3>
-                    <p>We use only natural fertilizers and pest control methods to ensure the highest quality mangoes.</p>
-                </div>
-                <div class="practice-item">
-                    <h3>Sustainable Water Use</h3>
-                    <p>Our irrigation systems are designed to conserve water while keeping our trees healthy.</p>
-                </div>
-                <div class="practice-item">
-                    <h3>Eco-Friendly Packaging</h3>
-                    <p>We use biodegradable and recyclable materials for all our packaging needs.</p>
-                </div>
-            </div>
-        </section>
-    </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      const navLinksItems = document.querySelectorAll('.nav-links a');
 
-    <footer>
-        <p>&copy; 2023 Kher Farm. All rights reserved.</p>
-    </footer>
+      function closeMenu() {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        document.body.style.overflow = '';
+      }
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
-            const navLinksItems = document.querySelectorAll('.nav-links a');
-            
-            function closeMenu() {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-                document.body.style.overflow = '';
-                document.body.classList.remove('menu-open');
-            }
-            
-            hamburger.addEventListener('click', function(e) {
-                e.stopPropagation();
-                this.classList.toggle('active');
-                navLinks.classList.toggle('active');
-                
-                if (this.classList.contains('active')) {
-                    document.body.style.overflow = 'hidden';
-                    document.body.classList.add('menu-open');
-                } else {
-                    closeMenu();
-                }
-            });
-            
-            navLinksItems.forEach(link => {
-                link.addEventListener('click', closeMenu);
-            });
-            
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.nav-links') && !e.target.closest('.hamburger')) {
-                    closeMenu();
-                }
-            });
-            
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 992) {
-                    closeMenu();
-                }
-            });
-        });
-    </script>
+      hamburger.addEventListener('click', function (e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        document.body.style.overflow = this.classList.contains('active') ? 'hidden' : '';
+      });
+
+      navLinksItems.forEach((link) => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.nav-links') && !e.target.closest('.hamburger')) {
+          closeMenu();
+        }
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 992) closeMenu();
+      });
+    });
+  </script>
 </body>
 </html>

@@ -1,12 +1,14 @@
 /* Farm Page Specific Styles */
+.farm-main{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3)),
+                url('../images/mango2.jpg') center/cover no-repeat;
+            }
 .hero-section {
     padding: 120px 20px 60px;
     text-align: center;
     color: white;
     position: relative;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3)),
-                url('../images/mango2.jpg') center/cover no-repeat;
-    margin-top: 80px;
+    margin-top: 120px;
     z-index: 1;
     backdrop-filter: brightness(0.85);
 }
@@ -35,11 +37,6 @@
 /* Section spacing */
 .section-padding {
     padding: 80px 20px;
-}
-
-/* Background for content section */
-.light-bg {
-    background-color: #fffdf6;
 }
 
 /* Gallery Grid */
@@ -83,12 +80,12 @@
 }
 
 .practice-item {
-    background: #ffffff;
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
+    text-align: center;
 }
 
 .practice-item:hover {
@@ -97,7 +94,7 @@
 }
 
 .practice-item h3 {
-    color: #d35400;
+    color: #fff;
     margin-bottom: 15px;
     font-size: 1.6rem;
     font-weight: 600;
